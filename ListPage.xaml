@@ -12,7 +12,8 @@
         <Editor.Behaviors>
             <local:ValidationBehaviour />
         </Editor.Behaviors>
-        </Editor>
+        </Editor>
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -31,7 +32,11 @@
                     <TextCell Detail="{Binding Description}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>
+
+
+        <Button Text="Add/Choose Item to delete" MaximumWidthRequest="300"
+Clicked="OnDeleteItemButtonClicked"/>
         <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300"
 Clicked="OnChooseButtonClicked"/>
     </StackLayout>

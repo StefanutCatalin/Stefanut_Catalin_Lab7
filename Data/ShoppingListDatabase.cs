@@ -19,6 +19,18 @@ namespace Stefanut_Catalin_Lab7.Data
             _database.CreateTableAsync<Product>().Wait();
             _database.CreateTableAsync<ListProduct>().Wait();
         }
+        public Task<int> DeleteListProductAsync(ListProduct listp)
+        {
+            return _database.DeleteAsync(listp);
+        }
+
+        public Task<List<ListProduct>> GetListProducts()
+        {
+            return _database.QueryAsync<ListProduct>("select * from ListProduct");
+        }
+
+
+
         public Task<List<ShopList>> GetShopListsAsync()
         {
             return _database.Table<ShopList>().ToListAsync();
